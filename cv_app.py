@@ -5,8 +5,12 @@ st.set_page_config(page_title="CV - Rodrigo Huamán", page_icon="📄", layout="
 
 # --- SIDEBAR ---
 with st.sidebar:
-    image = Image.open("IMG_3422")
-    st.image(image, width=180)
+    try:
+        image = Image.open("IMG_3422.JPG")  # Asegúrate de que esté en la carpeta del script
+        st.image(image, width=180)
+    except FileNotFoundError:
+        st.warning("⚠️ No se encontró la imagen de perfil 'IMG_3422.JPG'.")
+
     st.markdown("## ✨ Rodrigo Huamán")
     st.markdown("""
 📍 **Lima, Perú**  
@@ -17,7 +21,6 @@ with st.sidebar:
     """)
     st.markdown("---")
     st.markdown("🎯 *Apasionado por el cine, la cultura visual y el desarrollo digital(?).*")
-
 # --- TÍTULO ---
 st.title("📄 Curriculum Vitae – Rodrigo Huamán")
 
@@ -92,10 +95,14 @@ Creación y divulgación de contenidos sobre cine.
 """)
 
     # Imagen del post
-    post_image = "IMG_3422"  # Guarda la miniatura del post como 'post.jpg' en tu carpeta
-    post_url = "https://www.instagram.com/p/DJ0gE6GtZSw/?hl=es-la&img_index=1"  # Enlace real de tu post
+    post_image = "IMG_3422.JPG"  # Reemplázala si usarás otra miniatura más adecuada
+    post_url = "https://www.instagram.com/p/DJ0gE6GtZSw/?hl=es-la&img_index=1"
 
-    st.image(post_image, caption="Cultura visual y espacio urbano", use_container_width=True)
+    try:
+        st.image(post_image, caption="Cultura visual y espacio urbano", use_container_width=True)
+    except FileNotFoundError:
+        st.warning("⚠️ No se encontró la imagen del post 'IMG_3422.JPG'.")
+
     st.markdown(f"<a href='{post_url}' target='_blank'>🔗 Ver este post en Instagram</a>", unsafe_allow_html=True)
 
 # --- CONTACTO ---
