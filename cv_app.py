@@ -5,7 +5,7 @@ st.set_page_config(page_title="CV - Rodrigo Huamán", page_icon="📄", layout="
 
 # --- SIDEBAR ---
 with st.sidebar:
-    image = Image.open("IMG_3422.JPG")
+    image = Image.open("IMG_3422")
     st.image(image, width=180)
     st.markdown("## ✨ Rodrigo Huamán")
     st.markdown("""
@@ -92,7 +92,7 @@ Creación y divulgación de contenidos sobre cine.
 """)
 
     # Imagen del post
-    post_image = "IMG_3422.JPG"  # Guarda la miniatura del post como 'post.jpg' en tu carpeta
+    post_image = "IMG_3422"  # Guarda la miniatura del post como 'post.jpg' en tu carpeta
     post_url = "https://www.instagram.com/p/DJ0gE6GtZSw/?hl=es-la&img_index=1"  # Enlace real de tu post
 
     st.image(post_image, caption="Cultura visual y espacio urbano", use_container_width=True)
