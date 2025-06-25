@@ -106,5 +106,3 @@ with tabs[5]:
 📧 [Envíame un correo](mailto:huamanmaitarodrigoalonso@gmail.com)    
 📸 [Instagram](https://instagram.com/rdrigo_ah)
 """)
-
-
